@@ -1,0 +1,8 @@
+R
+setwd("Desktop/phetest/git")
+getwd()
+library(mgcv)
+m1<-gam(y~s(fac,bs="re")+s(x1)+s(x2),data=dat1)
+summary(m1)
+plot(m1$fit,y)
+
